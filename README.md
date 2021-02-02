@@ -2,13 +2,13 @@
 
 A minimalistic Django doctor appointment app.
 
-At the root there is a script that installs all the necessary packages.
+At the root there is a script that installs all the necessary packages and runs the server .
 
 login: password for url/admin --> admin: password
 
-command to execute :
+### Manual Execution
 
-change directory to /polyclinics/
+cd polyclinics/
 
 python3 manage.py runserver somerandomaddress:port
 
