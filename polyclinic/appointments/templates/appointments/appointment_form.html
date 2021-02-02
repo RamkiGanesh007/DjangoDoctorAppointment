@@ -1,0 +1,24 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1 %}
+{% bootstrap_messages %}
+{{ form.media }}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+        <h3>Enter Your Details:</h3>
+            <form action="{% url 'appointments:form' %}" method="post" class="form">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                <button type="submit" class="btn btn-primary btn-lg">
+                    Submit 
+                </button>
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+</div>
+
