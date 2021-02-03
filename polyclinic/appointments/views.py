@@ -28,8 +28,13 @@ class AppointmentCreateView(AppointmentCreateMixin, CreateView):
     fields = ('patient_name',
               'patient_middlename',
               'patient_surname',
+              'patient_age',
+              'gender',
+              'patient_mobile',
+              'patient_email',
               'doctor',
-              'appointment_time')
+              'appointment_time',
+              'patient_addinfo')
     success_msg = "Thank you! You made an appointment."
 
     def get_form(self, form_class):
@@ -47,9 +52,19 @@ class AppointmentCreateView(AppointmentCreateMixin, CreateView):
 
     def form_valid(self, form):
         import datetime
+        from datetime import date
         start_date = form.cleaned_data['appointment_time']
         end_date = form.cleaned_data['appointment_time'] + \
             datetime.timedelta(hours=1)
+        
+        print(start_date)
+
+        curr_date=date.today()
+
+        # Unimplemented !!
+        # if curr_date<start_date:
+        #     form.add_error('appointment_time', 'Please Select the Date from today..')
+        #     return self.form_valid(form)
 
         if not datetime.time(9, 00) \
                 <= start_date.time() < datetime.time(18, 00):

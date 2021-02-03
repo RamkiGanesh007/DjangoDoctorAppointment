@@ -11,7 +11,7 @@ The Script the root folder will install all the requirements and runs the server
 ```
 ./start.sh
 ```
-### Linux (Manual)
+#### Linux (Manual)
 ```
 sudo apt-get -y install build-essential
 sudo apt-get -y install libsqlite3-dev
@@ -19,7 +19,7 @@ sudo apt-get -y install sqlite3
 sudo apt-get -y install python3-pip
 sudo pip3 install -r requirements.txt
 ```
-### Windows(Manual)
+#### Windows(Manual)
 ```
 pip3 install -r requirements.txt
 ```
