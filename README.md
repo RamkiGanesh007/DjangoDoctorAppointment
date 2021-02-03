@@ -7,7 +7,7 @@ A Minimalistic Django Doctor Appointment App.
 This Project assumes that the python 3.X is pre-installed.
  
 The Script the root folder will install all the requirements and runs the server on [Address](https://127.0.0.5:80) .
-### Linux and Windows (Script)
+### Linux and Windows (Bash Script)
 ```
 ./start.sh
 ```
@@ -16,7 +16,6 @@ The Script the root folder will install all the requirements and runs the server
 sudo apt-get -y install build-essential
 sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install sqlite3
-sudo apt-get -y install bzip2 libbz2-dev
 sudo apt-get -y install python3-pip
 sudo pip3 install -r requirements.txt
 ```
@@ -41,7 +40,7 @@ sudo python3 manage.py runserver 127.0.0.5:80;
 ```
 cd polyclinic/
 python manage.py makemigrations
-python manage.py migrate
+python manage.py migrate 
 python manage.py runserver 127.0.0.5:80;
 ```
 
